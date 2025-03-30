@@ -6,12 +6,13 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: #696969;
+    background-color: #2d2d2d; /* Темный фон */
+    color: #fff; /* Белый цвет текста */
 }
 
 /* Верхняя панель */
 .header {
-    background-color: #333;
+    background-color: #333; /* Темный цвет для панели */
     color: #fff;
     padding: 15px 30px;
     display: flex;
@@ -65,8 +66,8 @@ body {
 .main-content {
     margin-top: 80px; /* Отступ сверху, чтобы контент не перекрывался шапкой */
     padding: 30px;
-    background-color: #696969;
-    color: #333;
+    background-color: #333; /* Темный фон для контента */
+    color: #fff; /* Белый цвет текста */
     overflow-y: auto;
     flex-grow: 1;
 }
@@ -74,19 +75,19 @@ body {
 /* Заголовки */
 h1, h2 {
     font-size: 36px;
-    color: #333;
+    color: #fff; /* Белые заголовки */
     margin-bottom: 20px;
 }
 
 h3 {
     font-size: 28px;
-    color: #333;
+    color: #fff; /* Белые подзаголовки */
     margin-bottom: 15px;
 }
 
 /* Стили для блоков кода с подсветкой синтаксиса */
 pre {
-    background-color: #2e2e2e;
+    background-color: #2e2e2e; /* Темный фон для блока кода */
     color: #f1f1f1;
     padding: 20px;
     border-radius: 8px;
@@ -98,7 +99,7 @@ pre {
 
 /* Подсветка синтаксиса с Prism.js */
 code {
-    color: #f39c12;
+    color: #f39c12; /* Оранжевый цвет для кода */
     font-family: 'Courier New', Courier, monospace;
 }
 
