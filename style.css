@@ -12,7 +12,7 @@ body {
 
 /* Боковая панель */
 .sidebar {
-    width: 200px; /* Сделаем боковую панель уже */
+    width: 200px; /* Уменьшена ширина боковой панели */
     background-color: #1a1a1a;
     padding: 20px;
     position: fixed;
@@ -22,7 +22,7 @@ body {
     color: #fff;
     z-index: 10;
     overflow-y: auto;
-    box-sizing: border-box; /* Убедимся, что padding не влияет на ширину */
+    box-sizing: border-box; /* Чтобы padding не влиял на ширину */
 }
 
 /* Логотип на боковой панели */
@@ -53,7 +53,7 @@ body {
 
 /* Основной контейнер */
 .main-container {
-    margin-left: 500px; /* Отступ от боковой панели, чтобы она не перекрывала */
+    margin-left: 220px; /* Отступ от боковой панели (ширина панели + padding) */
     flex-grow: 1;
     padding: 20px;
     overflow-y: auto;
@@ -63,17 +63,14 @@ body {
 /* Заголовки */
 header {
     margin-bottom: 40px;
-    margin-left: 500px;
 }
 
 h1, h2 {
     font-size: 32px;
-    margin-left: 500px;
 }
 
 h3 {
     font-size: 28px;
-    margin-left: 500px;
 }
 
 /* Блоки кода */
@@ -82,7 +79,6 @@ pre {
     padding: 15px;
     border-radius: 8px;
     overflow-x: auto;
-    margin-left: 500px;
 }
 
 code {
