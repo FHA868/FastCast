@@ -47,7 +47,7 @@ body {
 /* Стили для ссылок в меню */
 .header ul li a.nav-btn {
     color: #ccc;
-    text-decoration: none;
+    text-decoration: none; /* Убираем подчёркивание у ссылок */
     font-size: 18px;
     padding: 10px 15px;
     border-radius: 5px;
@@ -106,9 +106,11 @@ code {
 /* Стили для ссылок */
 a {
     color: #f39c12;
-    transition: color 0.3s ease;
+    text-decoration: none; /* Убираем подчёркивание у ссылок */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
+/* Подчёркивание при наведении на ссылку */
 a:hover {
     text-decoration: underline;
 }
