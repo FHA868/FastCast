@@ -12,16 +12,17 @@ body {
 
 /* Боковая панель */
 .sidebar {
-    width: 250px;
+    width: 200px; /* Сделаем боковую панель уже */
     background-color: #1a1a1a;
     padding: 20px;
-    position: fixed; /* Боковая панель фиксируется */
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     color: #fff;
-    z-index: 10; /* Панель будет сверху */
-    overflow-y: auto; /* Для прокрутки панели, если контент будет длинным */
+    z-index: 10;
+    overflow-y: auto;
+    box-sizing: border-box; /* Убедимся, что padding не влияет на ширину */
 }
 
 /* Логотип на боковой панели */
@@ -52,8 +53,8 @@ body {
 
 /* Основной контейнер */
 .main-container {
-    margin-left: 250px; /* Отступ от боковой панели */
-    flex-grow: 1; /* Основной контейнер растягивается на оставшееся пространство */
+    margin-left: 200px; /* Отступ от боковой панели, чтобы она не перекрывала */
+    flex-grow: 1;
     padding: 20px;
     overflow-y: auto;
     box-sizing: border-box;
