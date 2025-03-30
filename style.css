@@ -1,93 +1,121 @@
 /* Общие стили для сайта */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    height: 100vh;
     display: flex;
+    height: 100vh;
+    background-color: #f4f4f4;
 }
 
 /* Боковая панель */
 .sidebar {
-    width: 220px; /* Устанавливаем фиксированную ширину боковой панели */
-    background-color: #1a1a1a;
-    padding: 20px;
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding: 30px 20px;
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
-    color: #fff;
-    z-index: 10;
     overflow-y: auto;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 /* Логотип на боковой панели */
 .sidebar .logo {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    color: #f39c12;
 }
 
-/* Список навигации боковой панели */
-.sidebar .toc {
+/* Стили для списка навигации */
+.sidebar ul {
     list-style: none;
     padding: 0;
 }
 
-.sidebar .toc li {
-    margin: 10px 0;
+.sidebar ul li {
+    margin: 15px 0;
 }
 
-.sidebar .toc a {
+.sidebar ul li a {
     color: #ccc;
     text-decoration: none;
+    font-size: 18px;
 }
 
-.sidebar .toc a:hover {
+.sidebar ul li a:hover {
     color: #f39c12;
 }
 
-/* Основной контейнер */
-.main-container {
-    margin-left: 220px; /* Отступ от боковой панели */
-    padding: 20px;
+/* Контейнер основного контента */
+.main-content {
+    margin-left: 250px;
+    padding: 30px;
     flex-grow: 1;
-    background-color: #2e2e2e;
-    color: #e0e0e0;
+    background-color: #fff;
+    color: #333;
     overflow-y: auto;
 }
 
 /* Заголовки */
-header {
-    margin-bottom: 40px;
-}
-
 h1, h2 {
-    font-size: 32px;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 h3 {
     font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
 }
 
-/* Блоки кода */
+/* Стили для блоков кода */
 pre {
-    background-color: #333;
-    padding: 15px;
+    background-color: #2e2e2e;
+    color: #f1f1f1;
+    padding: 20px;
     border-radius: 8px;
     overflow-x: auto;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
 }
 
 code {
     color: #f39c12;
-    font-family: "Courier New", Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-/* Стили для ссылок и навигации */
+/* Стили для ссылок */
 a {
     color: #f39c12;
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Мобильная адаптивность */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+        padding: 20px;
+    }
+    .main-content {
+        margin-left: 200px;
+    }
+}
+
+/* Для фиксированной шапки (если нужно) */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 30px;
+    font-size: 24px;
+    text-align: center;
 }
