@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FastCast - Документация</title>
+
+    <!-- Подключаем Prism.js для подсветки синтаксиса -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+
     <!-- Подключение стилей -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -29,10 +34,10 @@
         <section id="getting-started">
             <h1>Getting Started</h1>
             <p>Здесь начинается ваша работа с FastCast. Чтобы установить модуль, используйте следующий код:</p>
-<pre>
+            <pre><code class="language-lua">
 -- Пример кода для установки FastCast:
 local FastCast = require(game.ServerScriptService.FastCast)
-</pre>
+            </code></pre>
         </section>
 
         <section id="installation">
@@ -43,10 +48,10 @@ local FastCast = require(game.ServerScriptService.FastCast)
         <section id="usage">
             <h2>Использование</h2>
             <p>Пример использования FastCast для создания hitbox:</p>
-<pre>
+            <pre><code class="language-lua">
 local hitbox = FastCast.new(workspace.Part)
 hitbox:Fire()
-</pre>
+            </code></pre>
         </section>
 
         <section id="api-reference">
