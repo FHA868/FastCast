@@ -43,7 +43,8 @@ body {
     margin: 0;
 }
 
-.header ul li a {
+/* Стили для ссылок в меню */
+.header ul li a.nav-btn {
     color: #ccc;
     text-decoration: none;
     font-size: 18px;
@@ -51,10 +52,11 @@ body {
     border-radius: 5px;
     background-color: #444;
     transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
 }
 
 /* Плавная смена цвета кнопок при наведении */
-.header ul li a:hover {
+.header ul li a.nav-btn:hover {
     background-color: #f39c12;
     color: #333;
 }
