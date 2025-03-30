@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FastCast - Документация</title>
+    <title>FastCast - Documentation</title>
 
     <!-- Подключаем Prism.js для подсветки синтаксиса -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
@@ -23,13 +23,14 @@
             <li><a href="#usage" class="nav-btn">Usage</a></li>
             <li><a href="#api-reference" class="nav-btn">API Reference</a></li>
             <li><a href="#Returns value" class="nav-btn">Returns values</a></li>
+            <li><a href="#MQA" class="nav-btn">Most questions answers</a></li>
         </ul>
     </div>
 
     <!-- Основной контент -->
     <div class="main-content">
         <header>
-            FastCast - Документация
+            FastCast - Documentation
         </header>
 
         
@@ -55,7 +56,7 @@ local FastCast = require(game.ServerScriptService.FastCast)
             <pre><code class="language-lua">
 local FastCast = require(game.ServerScriptService.FastCast)
 
-local hitbox = FastCast.new(workspace.Part)
+local hitbox = FastCast.new(workspace.Part,false,"Test",{Distance=1000})--Third value can be "" or anything in string. In Table you need to type a Distance and Paramamenters for Raycast using RaycastParams.new()
 
 hitbox.onHit:Connect(function(hit,distance)
     print(hit)--Printing a hit with a part or other objects in game
@@ -64,6 +65,7 @@ end)
 
 hitbox:Fire()
             </code></pre>
+            <p></p>
         </section>
 
         <section id="api-reference">
@@ -79,9 +81,18 @@ hitbox:Fire()
             <h2>Returns Values</h2>
             <ul>
                 <li><code>Fire(time)</code> - Returns nothing use onHit to get object and distance.</li>
-                <li><code>Destroy()</code> - Returns nothin. P.S.(Litteraly nothing to return)</li>
+                <li><code>Destroy()</code> - Returns nothing. P.S.(Litteraly nothing to return)</li>
                 <li><code>onHit:Connect(function(hit,distance))</code>-Returns a hitObject and distance of raycast.</li>
                 <li><code>MultiCast(directions,distance)</code>- Returns all of results of raycast in table!</li>
+            </ul>
+        </section>
+        <section id="MQA">
+            <h2>Returns Values</h2>
+            <ul>
+                <p>Can i use it for tools? Answer:Yes you can use it for any object if it Part or MeshPart or Union</p>
+                <p>Will this module gets updates? Answer:Yes this module will get a updates in a random time just check a this site for more info about it!</p>
+                <p>Can i help to create this module? Answer:No i making this module in solo but you can give me an ideas type to this gmail:Instance868@gmail.com</p>
+                <p>How optimized is it? Answer:It's super optimized i checked it can run 2500+ raycast at the moment if you using part it can be laggy if not no lags maybe.I tested at my GPU NVIDIA RTX 3060 and my CPU i7-9700k and i have 30 fps with 2500+ parts!</p>
             </ul>
         </section>
     </div>
