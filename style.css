@@ -5,14 +5,11 @@ body {
     padding: 0;
     height: 100vh;
     display: flex;
-    flex-direction: row;
-    background-color: #2e2e2e;
-    color: #e0e0e0;
 }
 
 /* Боковая панель */
 .sidebar {
-    width: 200px; /* Уменьшена ширина боковой панели */
+    width: 220px; /* Устанавливаем фиксированную ширину боковой панели */
     background-color: #1a1a1a;
     padding: 20px;
     position: fixed;
@@ -22,7 +19,6 @@ body {
     color: #fff;
     z-index: 10;
     overflow-y: auto;
-    box-sizing: border-box; /* Чтобы padding не влиял на ширину */
 }
 
 /* Логотип на боковой панели */
@@ -53,11 +49,12 @@ body {
 
 /* Основной контейнер */
 .main-container {
-    margin-left: 220px; /* Отступ от боковой панели (ширина панели + padding) */
-    flex-grow: 1;
+    margin-left: 220px; /* Отступ от боковой панели */
     padding: 20px;
+    flex-grow: 1;
+    background-color: #2e2e2e;
+    color: #e0e0e0;
     overflow-y: auto;
-    box-sizing: border-box;
 }
 
 /* Заголовки */
