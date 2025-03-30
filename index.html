@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FastCast - Документация</title>
+    <!-- Подключение стилей -->
     <link rel="stylesheet" href="style.css">
-<script type="text/javascript" src="/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=8XnPcrEcCIicT9aSssZ5A-MAirzEnYftCWOItS_78l2DrqJ7RPEs9m3GD92pe18b5cnFzzmgAPbJ0Yy4ke96kg" charset="UTF-8"></script></head>
+</head>
 <body>
-    <!-- Боковая панель -->
-    <div class="sidebar">
+    <!-- Верхняя панель -->
+    <div class="header">
         <div class="logo">FastCast</div>
         <ul>
             <li><a href="#getting-started">Getting Started</a></li>
@@ -24,22 +25,28 @@
             FastCast - Документация
         </header>
 
+        <!-- Секции документации -->
         <section id="getting-started">
             <h1>Getting Started</h1>
             <p>Здесь начинается ваша работа с FastCast. Чтобы установить модуль, используйте следующий код:</p>
-            <pre><code>local FastCast = require(game.ReplicatedStorage.FastCast)</code></pre>
+<pre>
+-- Пример кода для установки FastCast:
+local FastCast = require(game.ServerScriptService.FastCast)
+</pre>
         </section>
 
         <section id="installation">
             <h2>Установка</h2>
             <p>Скачайте модуль из Roblox Library или с GitHub.</p>
-            <pre><code>local FastCast = require(game.ReplicatedStorage.FastCast)</code></pre>
         </section>
 
         <section id="usage">
             <h2>Использование</h2>
             <p>Пример использования FastCast для создания hitbox:</p>
-            <pre><code>local hitbox = FastCast.new(workspace.Part)</code></pre>
+<pre>
+local hitbox = FastCast.new(workspace.Part)
+hitbox:Fire()
+</pre>
         </section>
 
         <section id="api-reference">
