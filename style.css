@@ -4,62 +4,63 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
     height: 100vh;
     background-color: #f4f4f4;
 }
 
-/* Боковая панель */
-.sidebar {
-    width: 250px;
+/* Верхняя панель */
+.header {
     background-color: #333;
     color: #fff;
-    padding: 30px 20px;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
-    bottom: 0;
-    overflow-y: auto;
-    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    right: 0;
+    z-index: 10;
 }
 
-/* Логотип на боковой панели */
-.sidebar .logo {
+/* Логотип на верхней панели */
+.header .logo {
     font-size: 28px;
     font-weight: bold;
-    margin-bottom: 50px;
     color: #f39c12;
 }
 
-/* Стили для списка навигации */
-.sidebar ul {
+/* Стили для списка навигации на верхней панели */
+.header ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    gap: 20px;
 }
 
-.sidebar ul li {
-    margin: 15px 0;
+.header ul li {
+    margin: 0;
 }
 
-.sidebar ul li a {
+.header ul li a {
     color: #ccc;
     text-decoration: none;
     font-size: 18px;
 }
 
-.sidebar ul li a:hover {
+.header ul li a:hover {
     color: #f39c12;
 }
 
 /* Контейнер основного контента */
 .main-content {
-    margin-left: 250px; /* Отступ от боковой панели */
+    margin-top: 80px; /* Отступ сверху, чтобы контент не перекрывался шапкой */
     padding: 30px;
-    flex-grow: 1;
     background-color: #fff;
     color: #333;
     overflow-y: auto;
-    position: relative; /* для правильной прокрутки */
+    flex-grow: 1;
 }
 
 /* Заголовки */
@@ -103,12 +104,8 @@ a:hover {
 
 /* Мобильная адаптивность */
 @media screen and (max-width: 768px) {
-    .sidebar {
-        width: 200px;
-        padding: 20px;
-    }
-    .main-content {
-        margin-left: 200px;
+    .header ul {
+        gap: 15px;
     }
 }
 
