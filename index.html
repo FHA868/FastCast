@@ -3,41 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Документация</title>
+    <title>FastCast - Документация</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Боковая панель -->
     <div class="sidebar">
         <div class="logo">FastCast</div>
-        <ul class="toc">
-            <li><a href="#section1">Getting Started</a></li>
-            <li><a href="#section2">Installation</a></li>
-            <li><a href="#section3">Usage</a></li>
-            <li><a href="#section4">API Reference</a></li>
+        <ul>
+            <li><a href="#getting-started">Getting Started</a></li>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#usage">Usage</a></li>
+            <li><a href="#api-reference">API Reference</a></li>
         </ul>
     </div>
-    
+
     <!-- Основной контент -->
-    <div class="main-container">
+    <div class="main-content">
         <header>
-            <h1>FastCast - Документация</h1>
+            FastCast - Документация
         </header>
-        <section id="section1">
-            <h2>Getting Started</h2>
-            <p>Инструкция по начальной настройке.</p>
+
+        <section id="getting-started">
+            <h1>Getting Started</h1>
+            <p>Здесь начинается ваша работа с FastCast. Чтобы установить модуль, используйте следующий код:</p>
+            <pre><code>local FastCast = require(game.ReplicatedStorage.FastCast)</code></pre>
         </section>
-        <section id="section2">
+
+        <section id="installation">
             <h2>Установка</h2>
-            <p>Инструкция по установке модуля FastCast.</p>
+            <p>Скачайте модуль из Roblox Library или с GitHub.</p>
+            <pre><code>local FastCast = require(game.ReplicatedStorage.FastCast)</code></pre>
         </section>
-        <section id="section3">
-            <h2>Пример использования</h2>
-            <p>Пример использования модуля.</p>
+
+        <section id="usage">
+            <h2>Использование</h2>
+            <p>Пример использования FastCast для создания hitbox:</p>
+            <pre><code>local hitbox = FastCast.new(workspace.Part)</code></pre>
         </section>
-        <section id="section4">
+
+        <section id="api-reference">
             <h2>API Reference</h2>
-            <p>Документация по API модуля FastCast.</p>
+            <ul>
+                <li><code>Fire()</code> - Запускает рейкаст.</li>
+                <li><code>Destroy()</code> - Удаляет хитбокс.</li>
+            </ul>
         </section>
     </div>
 </body>
