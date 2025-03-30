@@ -63,14 +63,17 @@ body {
 /* Заголовки */
 header {
     margin-bottom: 40px;
+    margin-left: 500px;
 }
 
 h1, h2 {
     font-size: 32px;
+    margin-left: 500px;
 }
 
 h3 {
     font-size: 28px;
+    margin-left: 500px;
 }
 
 /* Блоки кода */
@@ -79,6 +82,7 @@ pre {
     padding: 15px;
     border-radius: 8px;
     overflow-x: auto;
+    margin-left: 500px;
 }
 
 code {
