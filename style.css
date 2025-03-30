@@ -65,7 +65,7 @@ body {
 .main-content {
     margin-top: 80px; /* Отступ сверху, чтобы контент не перекрывался шапкой */
     padding: 30px;
-    background-color: #fff;
+    background-color: #696969;
     color: #333;
     overflow-y: auto;
     flex-grow: 1;
