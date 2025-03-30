@@ -22,6 +22,7 @@
             <li><a href="#installation" class="nav-btn">Installation</a></li>
             <li><a href="#usage" class="nav-btn">Usage</a></li>
             <li><a href="#api-reference" class="nav-btn">API Reference</a></li>
+            <li><a href="#Returns value" class="nav-btn">Returns values</li>
         </ul>
     </div>
 
@@ -31,26 +32,36 @@
             FastCast - Документация
         </header>
 
+        
+        <section id="installation">
+            <h2>Installing</h2>
+            <p>Download module from Roblox or from GitHub.</p>
+        </section>
+
         <!-- Секции документации -->
         <section id="getting-started">
             <h1>Getting Started</h1>
-            <p>Здесь начинается ваша работа с FastCast. Чтобы установить модуль, используйте следующий код:</p>
+            <p>Here starting your work with FastCast. To use this module, use this code:</p>
             <pre><code class="language-lua">
--- Пример кода для установки FastCast:
+-- Template code for install FastCast:
 local FastCast = require(game.ServerScriptService.FastCast)
             </code></pre>
         </section>
 
-        <section id="installation">
-            <h2>Установка</h2>
-            <p>Скачайте модуль из Roblox Library или с GitHub.</p>
-        </section>
-
+        
         <section id="usage">
-            <h2>Использование</h2>
-            <p>Пример использования FastCast для создания hitbox:</p>
+            <h2>Usage</h2>
+            <p>Template using FastCast for create hitbox:</p>
             <pre><code class="language-lua">
+local FastCast = require(game.ServerScriptService.FastCast)
+
 local hitbox = FastCast.new(workspace.Part)
+
+hitbox.onHit:Connect(function(hit,distance)
+    print(hit)--Printing a hit with a part or other objects in game
+    print(distance)--Printing distance of raycast. Idk if it need so.
+end)
+
 hitbox:Fire()
             </code></pre>
         </section>
@@ -58,8 +69,19 @@ hitbox:Fire()
         <section id="api-reference">
             <h2>API Reference</h2>
             <ul>
-                <li><code>Fire()</code> - Запускает рейкаст.</li>
-                <li><code>Destroy()</code> - Удаляет хитбокс.</li>
+                <li><code>Fire(time)</code> - Starts a function for raycast.Time can be nil!</li>
+                <li><code>Destroy()</code> - Deletes all data for this hitbox.</li>
+                <li><code>onHit(function(hit,distance))</code>-Gets object what hitted raycast.</li>
+                <li><code>MultiCast(directions,distance)</code>- Makes multiple raycast in typed directions.</li>
+            </ul>
+        </section>
+        <section id="Returns value">
+            <h2>Returns Values</h2>
+            <ul>
+                <li><code>Fire(time)</code> - Returns nothing use onHit to get object and distance.</li>
+                <li><code>Destroy()</code> - Returns nothin. P.S.(Litteraly nothing to return)</li>
+                <li><code>onHit:Connect(function(hit,distance))</code>-Returns a hitObject and distance of raycast.</li>
+                <li><code>MultiCast(directions,distance)</code>- Returns all of results of raycast in table!</li>
             </ul>
         </section>
     </div>
