@@ -19,14 +19,17 @@ body {
     left: 0;
     bottom: 0;
     color: #fff;
+    z-index: 10; /* Чтобы панель была выше контента */
 }
 
+/* Логотип на боковой панели */
 .sidebar .logo {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 30px;
 }
 
+/* Список навигации боковой панели */
 .sidebar .toc {
     list-style: none;
     padding: 0;
@@ -47,12 +50,14 @@ body {
 
 /* Основная часть */
 .main-content {
-    margin-left: 250px;
+    margin-left: 250px; /* Отступ от боковой панели */
     padding: 20px;
     overflow-y: auto;
-    width: calc(100% - 250px);
+    width: calc(100% - 250px); /* Занимает оставшуюся ширину экрана */
+    box-sizing: border-box; /* Для корректного вычисления ширины с учетом отступов */
 }
 
+/* Заголовки */
 header {
     margin-bottom: 40px;
 }
@@ -65,6 +70,7 @@ h3 {
     font-size: 28px;
 }
 
+/* Блоки кода */
 pre {
     background-color: #333;
     padding: 15px;
