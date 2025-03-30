@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FastCast - Документация</title>
-    <!-- Подключение стилей -->
     <link rel="stylesheet" href="style.css">
-    <!-- Подключение TinyMCE редактора -->
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
 <body>
-    <!-- Верхняя панель -->
-    <div class="header">
+    <!-- Боковая панель -->
+    <div class="sidebar">
         <div class="logo">FastCast</div>
         <ul>
             <li><a href="#getting-started">Getting Started</a></li>
@@ -27,20 +24,22 @@
             FastCast - Документация
         </header>
 
-        <!-- Редактируемый контент -->
         <section id="getting-started">
             <h1>Getting Started</h1>
-            <textarea id="editor">Здесь начинается ваша работа с FastCast. Чтобы установить модуль, используйте следующий код:</textarea>
+            <p>Здесь начинается ваша работа с FastCast. Чтобы установить модуль, используйте следующий код:</p>
+            <pre><code>local FastCast = require(game.ReplicatedStorage.FastCast)</code></pre>
         </section>
 
         <section id="installation">
             <h2>Установка</h2>
-            <textarea id="editor-installation">Скачайте модуль из Roblox Library или с GitHub.</textarea>
+            <p>Скачайте модуль из Roblox Library или с GitHub.</p>
+            <pre><code>local FastCast = require(game.ReplicatedStorage.FastCast)</code></pre>
         </section>
 
         <section id="usage">
             <h2>Использование</h2>
-            <textarea id="editor-usage">Пример использования FastCast для создания hitbox:</textarea>
+            <p>Пример использования FastCast для создания hitbox:</p>
+            <pre><code>local hitbox = FastCast.new(workspace.Part)</code></pre>
         </section>
 
         <section id="api-reference">
@@ -50,48 +49,6 @@
                 <li><code>Destroy()</code> - Удаляет хитбокс.</li>
             </ul>
         </section>
-
-        <!-- Кнопка для сохранения контента -->
-        <button onclick="saveContent()">Сохранить изменения</button>
     </div>
-
-    <!-- Подключение скриптов -->
-    <script>
-        // Инициализация TinyMCE
-        tinymce.init({
-            selector: '#editor, #editor-installation, #editor-usage', // Подключение к каждому редактору
-            plugins: 'lists link image', // Плагины
-            toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | link image | bullist numlist', // Панель инструментов
-        });
-
-        // Функция для сохранения контента
-        function saveContent() {
-            // Получаем контент из редакторов
-            const gettingStartedContent = tinymce.get('editor').getContent();
-            const installationContent = tinymce.get('editor-installation').getContent();
-            const usageContent = tinymce.get('editor-usage').getContent();
-
-            console.log("Сохраненный контент:");
-            console.log("Getting Started: ", gettingStartedContent);
-            console.log("Installation: ", installationContent);
-            console.log("Usage: ", usageContent);
-
-            // Здесь вы можете сохранить данные на сервер или в localStorage
-            // Например, отправить на сервер:
-            // fetch('/saveContent', {
-            //     method: 'POST',
-            //     body: JSON.stringify({
-            //         gettingStarted: gettingStartedContent,
-            //         installation: installationContent,
-            //         usage: usageContent
-            //     }),
-            //     headers: {
-            //         'Content-Type': 'application/json'
-            //     }
-            // });
-
-            alert('Контент сохранен!');
-        }
-    </script>
 </body>
 </html>
