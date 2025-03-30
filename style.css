@@ -1,0 +1,87 @@
+/* Общие стили для сайта */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #2e2e2e;
+    color: #e0e0e0;
+}
+
+/* Боковая панель */
+.sidebar {
+    width: 250px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+}
+
+.sidebar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.sidebar .toc {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar .toc li {
+    margin: 10px 0;
+}
+
+.sidebar .toc a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.sidebar .toc a:hover {
+    color: #f39c12;
+}
+
+/* Основная часть */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    overflow-y: auto;
+    width: calc(100% - 250px);
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+h1, h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+pre {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+code {
+    color: #f39c12;
+    font-family: "Courier New", Courier, monospace;
+}
+
+/* Стили для ссылок и навигации */
+a {
+    color: #f39c12;
+}
+
+a:hover {
+    text-decoration: underline;
+}
