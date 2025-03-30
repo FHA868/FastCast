@@ -6,8 +6,8 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: #2d2d2d; /* Темный фон */
-    color: #fff; /* Белый цвет текста */
+    background-color: #1e1e1e; /* Темный фон страницы */
+    color: #ffffff; /* Белый текст по умолчанию */
 }
 
 /* Верхняя панель */
@@ -66,7 +66,7 @@ body {
 .main-content {
     margin-top: 80px; /* Отступ сверху, чтобы контент не перекрывался шапкой */
     padding: 30px;
-    background-color: #333; /* Темный фон для контента */
+    background-color: #2d2d2d; /* Темный фон для контента */
     color: #fff; /* Белый цвет текста */
     overflow-y: auto;
     flex-grow: 1;
